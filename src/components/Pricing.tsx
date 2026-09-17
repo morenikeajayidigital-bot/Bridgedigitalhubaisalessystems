@@ -21,10 +21,19 @@ export const Pricing: React.FC<PricingProps> = ({ onJoinClick }) => {
           className="bg-[#FFFFFF] border border-[#0A0A0A]/10 rounded-lg p-8 sm:p-12 space-y-8 shadow-xs"
         >
           {/* Notification badge */}
-          <div>
+          <div className="flex items-center justify-between gap-4">
             <span className="inline-block bg-[#DC143C] text-white text-xs sm:text-sm font-semibold px-3.5 py-1.5 rounded-full">
               Early enrollment open until October 22
             </span>
+            <div className="hidden sm:flex items-center gap-2 text-xs font-semibold text-[#0A0A0A]/80">
+              <img
+                src="/images/bridge_digital_hub_emblem.png"
+                alt="Bridge Digital Hub"
+                referrerPolicy="no-referrer"
+                className="w-5 h-5 rounded-full object-cover shrink-0"
+              />
+              <span>Bridge Digital Hub</span>
+            </div>
           </div>
 
           <div className="space-y-4">

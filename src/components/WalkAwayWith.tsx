@@ -62,12 +62,6 @@ export const WalkAwayWith: React.FC = () => {
               </div>
             </div>
           </div>
-
-          <div className="pt-6 border-t border-[#0A0A0A]/10">
-            <p className="text-base sm:text-lg font-semibold text-[#0A0A0A]">
-              All of this without hiring a developer, a copywriter, or an agency.
-            </p>
-          </div>
         </motion.div>
       </div>
     </section>

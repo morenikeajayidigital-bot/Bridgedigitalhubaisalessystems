@@ -15,10 +15,10 @@ export const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="space-y-8"
         >
-          {/* Target Audience Qualifier */}
+          {/* Category / Topic Badge */}
           <div className="inline-block">
-            <span className="inline-block bg-white text-[#0A0A0A] text-sm sm:text-base px-4 py-2 border border-[#0A0A0A]/15 font-medium leading-relaxed rounded-md">
-              For freelancers, coaches, consultants, and small business owners who already have people showing interest, but keep losing them before they pay.
+            <span className="inline-block bg-white text-[#0A0A0A] text-sm sm:text-base px-4 py-2 border border-[#0A0A0A]/15 font-semibold rounded-md shadow-2xs">
+              Business Sales & Automated Conversion Systems
             </span>
           </div>
 

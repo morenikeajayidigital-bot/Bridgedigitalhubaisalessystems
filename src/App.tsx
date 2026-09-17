@@ -13,8 +13,8 @@ import { QuestionsFAQ } from './components/QuestionsFAQ';
 import { FinalCta } from './components/FinalCta';
 import { CheckoutModal } from './components/CheckoutModal';
 import { StickyMobileCta } from './components/StickyMobileCta';
-import { WhatsAppFloatingButton, WHATSAPP_PHONE, WHATSAPP_URL } from './components/WhatsAppContact';
-import { MessageCircle } from 'lucide-react';
+import { WhatsAppFloatingButton, WHATSAPP_URL, OFFICIAL_EMAIL } from './components/WhatsAppContact';
+import { MessageCircle, Mail } from 'lucide-react';
 
 export default function App() {
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
@@ -50,22 +50,44 @@ export default function App() {
       {/* Footer */}
       <footer className="bg-[#E8DFCB] border-t border-[#0A0A0A]/10 py-12">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-4">
-          <p className="font-serif text-lg font-semibold text-[#0A0A0A]">
-            Bridge Digital Hub
-          </p>
+          <div className="flex flex-col items-center justify-center space-y-2">
+            <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#0A0A0A]/15 bg-white shadow-xs p-0.5 transform rotate-2 hover:rotate-0 transition-transform">
+              <img
+                src="/images/bridge_digital_hub_emblem.png"
+                alt="Bridge Digital Hub Logo"
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-cover rounded-full"
+              />
+            </div>
+            <p className="font-serif text-xl font-bold text-[#0A0A0A] tracking-tight">
+              Bridge Digital Hub
+            </p>
+            <p className="text-xs tracking-widest text-[#0A0A0A]/70 uppercase font-semibold">
+              Connect • Grow • Innovate
+            </p>
+          </div>
           <p className="text-xs text-[#0A0A0A]/60">
             October 22 to 25, 2026
           </p>
-          <div>
+          <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`WhatsApp inquiry to ${WHATSAPP_PHONE}`}
+              aria-label="Talk to Bridge Digitals on WhatsApp"
               className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#0A0A0A] bg-white border border-[#0A0A0A]/15 px-3.5 py-2 rounded-md hover:bg-white/80 transition-colors"
             >
-              <MessageCircle className="w-4 h-4" />
-              <span>Inquiries: {WHATSAPP_PHONE}</span>
+              <MessageCircle className="w-4 h-4 text-[#0A0A0A]" />
+              <span>Talk to Bridge Digitals</span>
+            </a>
+
+            <a
+              href={`mailto:${OFFICIAL_EMAIL}`}
+              aria-label={`Official Email: ${OFFICIAL_EMAIL}`}
+              className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#0A0A0A] bg-white border border-[#0A0A0A]/15 px-3.5 py-2 rounded-md hover:bg-white/80 transition-colors"
+            >
+              <Mail className="w-4 h-4" />
+              <span>{OFFICIAL_EMAIL}</span>
             </a>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { MessageCircle } from 'lucide-react';
-import { WHATSAPP_URL, WHATSAPP_PHONE } from './WhatsAppContact';
+import { WHATSAPP_URL } from './WhatsAppContact';
 
 interface StickyMobileCtaProps {
   onJoinClick: () => void;
@@ -37,8 +37,8 @@ export const StickyMobileCta: React.FC<StickyMobileCtaProps> = ({ onJoinClick })
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`Chat on WhatsApp at ${WHATSAPP_PHONE}`}
-              className="p-2.5 rounded-md border border-[#0A0A0A]/20 bg-white text-[#0A0A0A] flex items-center justify-center shrink-0"
+              aria-label="Talk to Bridge Digitals on WhatsApp"
+              className="p-2.5 rounded-md border border-[#0A0A0A]/20 bg-white text-[#0A0A0A] flex items-center justify-center shrink-0 hover:bg-[#E8DFCB]/40 transition-colors"
             >
               <MessageCircle className="w-5 h-5" />
             </a>

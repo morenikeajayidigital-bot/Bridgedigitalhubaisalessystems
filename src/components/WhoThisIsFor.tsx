@@ -17,8 +17,13 @@ export const WhoThisIsFor: React.FC = () => {
             <h2 className="font-serif text-2xl sm:text-3xl text-[#0A0A0A] font-semibold">
               Who this is for
             </h2>
+            <div className="p-3.5 bg-[#E8DFCB]/50 border border-[#0A0A0A]/15 rounded-md">
+              <p className="text-sm sm:text-base font-semibold text-[#0A0A0A] leading-snug">
+                For freelancers, coaches, consultants, and small business owners who already have people showing interest, but keep losing them before they pay.
+              </p>
+            </div>
             <p className="text-base sm:text-lg text-[#0A0A0A]/90 font-sans leading-relaxed">
-              This is for you if you already have some leads or interest coming in, but lose people because follow up is inconsistent or forgotten. It's for freelancers, coaches, consultants, small business owners, and anyone building something who needs a real sales system instead of guesswork. Students, professionals, and anyone ready to learn a practical skill are welcome here too.
+              This is for you if you already have some leads or interest coming in, but lose people because follow up is inconsistent or forgotten. It's for anyone building something who needs a real sales system instead of guesswork. Students, professionals, and anyone ready to learn a practical skill are welcome here too.
             </p>
           </motion.div>
 

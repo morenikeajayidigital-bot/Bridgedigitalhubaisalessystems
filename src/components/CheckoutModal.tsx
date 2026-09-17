@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Check, Copy } from 'lucide-react';
+import { X, Check, Copy, Mail } from 'lucide-react';
+import { OFFICIAL_EMAIL } from './WhatsAppContact';
 
 interface CheckoutModalProps {
   isOpen: boolean;
@@ -63,13 +64,23 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
         >
           {/* Header */}
           <div className="p-6 border-b border-[#0A0A0A]/10 flex items-center justify-between">
-            <div>
-              <span className="inline-block bg-[#DC143C] text-white text-xs font-semibold px-2.5 py-0.5 rounded-full mb-1">
-                Bridge Digital Hub
-              </span>
-              <h3 className="font-serif text-2xl font-bold text-[#0A0A0A]">
-                Join the AI Sales System
-              </h3>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full overflow-hidden border border-[#0A0A0A]/15 bg-white shrink-0 p-0.5 shadow-2xs">
+                <img
+                  src="/images/bridge_digital_hub_emblem.png"
+                  alt="Bridge Digital Hub"
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover rounded-full"
+                />
+              </div>
+              <div>
+                <span className="inline-block bg-[#DC143C] text-white text-[11px] font-semibold px-2 py-0.5 rounded-full mb-0.5">
+                  Bridge Digital Hub
+                </span>
+                <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#0A0A0A] leading-tight">
+                  Join the AI Sales System
+                </h3>
+              </div>
             </div>
             <button
               type="button"
@@ -216,6 +227,11 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
                   >
                     Open closed WhatsApp group
                   </a>
+                </div>
+
+                <div className="text-center text-xs text-[#0A0A0A]/75 flex items-center justify-center gap-1.5">
+                  <Mail className="w-3.5 h-3.5" />
+                  <span>Receipt or support inquiries: <a href={`mailto:${OFFICIAL_EMAIL}`} className="font-semibold underline text-[#0A0A0A]">{OFFICIAL_EMAIL}</a></span>
                 </div>
 
                 <div className="text-center">
